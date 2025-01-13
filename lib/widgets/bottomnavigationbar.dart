@@ -40,7 +40,7 @@ class _BottomState extends State<Bottom> {
               },
               child: Icon(
                 Icons.home,
-                size: 35,
+                size: 40,
                 color: index_color == 0 ? Color.fromARGB(255, 0, 162, 255) : Colors.grey,
               ),
             ),
@@ -53,7 +53,7 @@ class _BottomState extends State<Bottom> {
               },
               child: Icon(
                 Icons.bar_chart_outlined,
-                size: 35,
+                size: 40,
                 color: index_color == 1 ? Color.fromARGB(255, 0, 162, 255) : Colors.grey,
               ),
             ),

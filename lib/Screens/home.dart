@@ -86,6 +86,16 @@ class _HomeState extends State<Home> {
 
   ListTile get(int index, Add_data history) {
     return ListTile(
+      onTap: () => showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+                title: Text(
+                  'Deskripsi',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                content: Text(history.explain));
+          }),
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(5),
         child: Image.asset('images/${history.name}.png', height: 40),
@@ -103,8 +113,8 @@ class _HomeState extends State<Home> {
           fontWeight: FontWeight.w600,
         ),
       ),
-      trailing: Text("Rp${
-        history.amount}",
+      trailing: Text(
+        "Rp${history.amount}",
         style: TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 19,

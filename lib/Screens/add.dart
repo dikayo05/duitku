@@ -18,16 +18,19 @@ class _Add_ScreenState extends State<Add_Screen> {
   FocusNode ex = FocusNode();
   final TextEditingController amount_c = TextEditingController();
   FocusNode amount_ = FocusNode();
+
   final List<String> _item = [
     "Makanan",
     "Transfer",
     "Transportasi",
     "Pendidikan"
   ];
+
   final List<String> _itemei = [
     "Pemasukan",
     "Pengeluaran",
   ];
+
   @override
   void initState() {
     super.initState();
@@ -37,6 +40,15 @@ class _Add_ScreenState extends State<Add_Screen> {
     amount_.addListener(() {
       setState(() {});
     });
+  }
+
+  @override
+  void dispose() {
+    expalin_C.dispose();
+    ex.dispose();
+    amount_c.dispose();
+    amount_.dispose();
+    super.dispose();
   }
 
   Widget build(BuildContext context) {
@@ -170,6 +182,11 @@ class _Add_ScreenState extends State<Add_Screen> {
                       alignment: Alignment.center,
                       child: Row(
                         children: [
+                          Container(
+                            width: 40,
+                            child: Image.asset('images/${e}.png'),
+                          ),
+                          SizedBox(width: 10),
                           Text(
                             e,
                             style: TextStyle(fontSize: 18),
@@ -237,7 +254,8 @@ class _Add_ScreenState extends State<Add_Screen> {
               borderSide: BorderSide(width: 2, color: Color(0xffC5C5C5))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
-              borderSide: BorderSide(width: 2, color: Color.fromARGB(255, 0, 162, 255))),
+              borderSide: BorderSide(
+                  width: 2, color: Color.fromARGB(255, 0, 162, 255))),
         ),
       ),
     );
