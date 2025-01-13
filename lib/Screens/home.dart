@@ -103,8 +103,8 @@ class _HomeState extends State<Home> {
           fontWeight: FontWeight.w600,
         ),
       ),
-      trailing: Text(
-        history.amount,
+      trailing: Text("Rp${
+        history.amount}",
         style: TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 19,
@@ -224,7 +224,7 @@ class _HomeState extends State<Home> {
                   child: Row(
                     children: [
                       Text(
-                        '\Rp. ${total()}',
+                        '\Rp${total()}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -294,7 +294,7 @@ class _HomeState extends State<Home> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        '\Rp. ${income()}',
+                        '\Rp${income()}',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,

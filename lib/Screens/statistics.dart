@@ -42,7 +42,7 @@ class _StatisticsState extends State<Statistics> {
             children: [
               SizedBox(height: 20),
               Text(
-                'Statistics',
+                'Statistik',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
@@ -141,8 +141,8 @@ class _StatisticsState extends State<Statistics> {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              trailing: Text(
-                a[index].amount,
+              trailing: Text("Rp${
+                a[index].amount}",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 19,
